@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
 
   //find all posts  
   Post.findAll({
-    attributes: ['id', 'title', 'post_description', 'post_vintage', 'category_id' ,'created_at'],
+    attributes: ['id', 'title', 'post_description', 'post_price', 'post_vintage', 'category_id' ,'created_at'],
       order: [['created_at', 'DESC']], 
     include: [
       {
@@ -41,7 +41,7 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'title', 'post_description','post_vintage', 'created_at'],
+    attributes: ['id', 'title', 'post_description','post_price','post_vintage', 'created_at'],
     include: [
        {
       model: Comment,
@@ -76,6 +76,7 @@ router.post('/', (req, res) => {
    Post.create({
     title: req.body.title,
     post_description: req.body.post_description,
+    post_price: req.body.post_price,
     post_vintage: req.body.post_vintage,
     category_id: req.body.category_id,
     user_id: req.body.user_id

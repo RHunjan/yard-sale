@@ -22,6 +22,11 @@ Post.init(
         len: [5]
       }
     },
+    post_price: {
+      type: DataTypes.DECIMAL,
+      allowNull:false
+    },
+    
     post_vintage: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
