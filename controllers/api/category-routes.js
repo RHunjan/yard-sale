@@ -1,7 +1,20 @@
 const router = require('express').Router();
 const { Category } = require('../../models');
 
-//create a comment
+
+//get a category
+router.get('/', (req, res) => {
+  Category.findAll({
+ 
+  })
+    .then(dbCategoryData => res.json(dbCategoryData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+//create a category
 
 router.post('/', (req, res) => {
     Category.create({
