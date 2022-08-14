@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize');
 
-require('dotenv').config();
+//require('dotenv').config();
 
 // create connection to our db
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+const sequelize = new Sequelize('yard_sale_db', 'root', '!Apple@SQL', {
   host: 'localhost',
   dialect: 'mysql',
   port: 3306
