@@ -1,0 +1,34 @@
+
+
+<div class="col-md-10">
+    <div class="row justify-content-center"></div>
+
+((> <garage-item-info cards> ))
+</div> 
+ </div>  
+
+
+{{#if loggedIn}}}
+<div class="">
+<div class="row justify-content-center">
+ <div class="card col-md-7">
+      <form class="comment-form">
+  <div class="m-3">
+  <textarea class="comment-body" name="comment-body"></textarea>
+ </div>
+
+ <div class="row justify-content-left">
+ <button type="submit" class="btn-primary m-4">Comment</button>
+  <button type="button" class="like-btn btn-primary m-3" id="like-btn">LIKE</button>
+<button type="delete" class="btn-danger m-3" id="delete-item-btn">Remove Item</button>
+    </div>
+      </form>
+       </div>
+     </div>
+</div>
+{{/if}}
+
+    <div class="card col-md-7 m-4">
+
+{{> comments item.comments}}
+
