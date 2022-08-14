@@ -5,8 +5,8 @@
                
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
      Add 
- </button>  
-<!-- Modal -->
+ </button>                
+                <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -26,26 +26,49 @@
      <input list="items" name="item" id="item">
 
      <datalist id="items">
-         <option value="///////">
-         <option value="/////">
-         <option value="//////">
-         <option value="//////">
-         <option value="////">
+         <option value="Clothing">
+         <option value="Home & Hardware">
+         <option value="Sports">
+         <option value="Collectables">
+         <option value="Electronics">
            
      </datalist>
  </div>
  <div>
-      <label for="Condition">Condition :</label>
+      <label for="condition">Item Condition:</label>
          <input list="conditions" name="condition" id="condition">
             
-         <datalist id="">
+         <datalist id="condition">
              <option value="">
-             <option value="">
-             <option value="">
-             <option value="">
-             <option value="">
-             <option value="">
-             <option value="">
+             <option value="Brand Spankin New">
+             <option value="Opened, Never Used">
+             <option value="Lightly Used">
+             <option value="Used">
+             <option value="Referbished">
+             <option value="Needs Restoration">
          </datalist>
           </div>
- 
+           <div>
+  <label for="retail-price">What is the retail price of the item your listing?</label>
+    <input type="number" id="retail-price" />
+     </div>
+     <div>
+            <label for="resale-price">Whats your resale asking price?</label>
+            <input type="number" id="resale-price" />
+        </div>
+         <div>
+        <label for="description">Add a brief description about your item and increase the chance of finding the right buyer!!!</label>
+        <input type="text" id="description" />
+        </div>
+    
+       <div>
+         <label for="contact">Provide an Email for customers to contact you at </label>
+         <input type="text" id="contact" />
+        </div>
+
+ </div>
+  <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button submit" class="btn btn-primary" id="submit">Save changes</button>
+                        
+</div>
