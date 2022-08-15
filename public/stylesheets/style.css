@@ -12,20 +12,20 @@ body, html {
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: #020509;
   font-weight: bold;
   transition: color .1s;
 }
 
 a:hover {
-  color: #3486eb;
+  color: #e09317;
 }
 
 button {
-  background-color: #225ca3;
+  background-color: #f3ef0b;
   border: 0;
   padding: 1%;
-  color: white;
+  color: rgb(255, 128, 0);
   font-weight: bold;
   transition: background-color .1s;
   cursor: pointer;
@@ -33,7 +33,7 @@ button {
 }
 
 button:hover {
-  background-color: #3486eb;
+  background-color: #f8ae00;
 }
 
 .post-list {
@@ -49,7 +49,7 @@ textarea, input {
 
 textarea:focus, input:focus {
   outline: none;
-  border: 1px solid #3486eb;
+  border: 1px solid #fbff24;
 }
 
 textarea {
@@ -97,7 +97,7 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: #f9ea1f;
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
@@ -134,7 +134,7 @@ main {
 }
 
 .upvote-btn {
-  background-color: #197d0f;
+  background-color: #1dff08;
   transition: background-color .1s;
 }
 
