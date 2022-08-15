@@ -5,8 +5,16 @@
   </h2>
   <form class="edit-post-form">
     <div>
+   <!-- 
+    ///note sure how exactly but would like to replace with code for rendering the image 
+    refer to single-post.handlebars////
+
+
       <input name="-title" type="text" value="{{post.title}}" />
       <span>({{format_url post.post_url}})</span>
+      -->
+
+      
     </div>
     <div>
       {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}

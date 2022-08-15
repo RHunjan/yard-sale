@@ -1,0 +1,50 @@
+{{> post-info post}}
+
+{{#if loggedIn}}
+
+
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+
+<!-- not exactly clear on how to make the image work
+
+ <h1>Display Static Images Using Handlebars In NodeJS</h1>
+  <br>
+      <img src="EXAMPLE.png" alt="" style="border: 5px inset black;">
+
+
+-->  
+
+
+<!-- javascript for above code
+// Route to display static src images
+app.get("/static", (req, res) => {
+    res.render("static");
+});
+-->
+
+
+<!--- Index.js Rout to display static image
+
+// Route to display static src images
+app.get("/static", (req, res) => {
+    res.render("static");
+});
+-->
+  <div>
+    <button type="submit">add comment</button>
+    <button type="button" class="upvote-btn">like</button>
+  </div> 
+
+</form>
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
+{{/if}}
