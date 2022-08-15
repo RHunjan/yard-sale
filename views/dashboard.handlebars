@@ -1,1 +1,60 @@
-<h2>Hello World!</h2>
+<section>
+  <h2>Sell New Item</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+
+
+
+    <!-- not exactly clear on how to make the image work
+
+ <h1>Display Static Images Using Handlebars In NodeJS</h1>
+  <br>
+      <img src="EXAMPLE.png" alt="" style="border: 5px inset black;">
+  <div>
+    <button type="submit">add comment</button>
+    <button type="button" class="upvote-btn">like</button>
+  </div> 
+
+-->  
+
+
+<!-- javascript for above code
+// Route to display static src images
+app.get("/static", (req, res) => {
+    res.render("static");
+});
+-->
+
+
+<!--- Index.js Rout to display static image
+
+// Route to display static src images
+app.get("/static", (req, res) => {
+    res.render("static");
+});
+-->
+
+    <button type="submit" class="btn">Sell</button>
+  </form>
+</section>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Garage items</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>
+
