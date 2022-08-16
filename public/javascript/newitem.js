@@ -1,33 +1,30 @@
-async function newFormHandler(event) {
-    event.preventDefault();
-  
-    const title = document.querySelector('input[name="post_title"]').value;(trim)
-    const post_description = document.querySelector('input[name="post_description"]').value;
-    const post_price = document.querySelector('input[name="post_price"]').value;
-    const  post_category = document.querySelector('input[name="post_category"]').value;
+//sign up
+async function newItemFormHandler(event) {
+  event.preventDefault();
 
-    const response = await fetch(`/api/post-routes`, {
+  const title = document.querySelector('#title').value.trim();
+  const post_description = document.querySelector('#post-description').value.trim();
+  const post_price = document.querySelector('#post-price').value.trim();
 
-
-      method: 'POST',
+  if (title && post_description && post_price) {
+    const response = await fetch('/api/posts', {
+      method: 'post',
       body: JSON.stringify({
         title,
         post_description,
         post_price,
-        post_category
-
+       
       }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      headers: { 'Content-Type': 'application/json' }
     });
-  
+
+    // check the response status
     if (response.ok) {
-      document.location.replace('/dashboard');
+     document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }
   }
-  
-  document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
-  
+}
+
+document.querySelector('.new-item-form').addEventListener('submit', newItemFormHandler);
