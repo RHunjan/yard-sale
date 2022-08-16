@@ -27,7 +27,11 @@
   <div class="wrapper">
     <header>
       <h1>
+        {{#if loggedIn}}
+        <a href="/homepage">Yard Sale</a>
+        {{else}}
         <a href="/">Yard Sale</a>
+        {{/if}}
       </h1>
 
       <nav>
