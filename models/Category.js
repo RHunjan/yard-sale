@@ -18,7 +18,6 @@ Category.init(
         validate: {
             len: [5]
         }
-
     }
   },
   {

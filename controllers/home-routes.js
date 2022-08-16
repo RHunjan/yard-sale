@@ -85,7 +85,9 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login',{
+    loggedIn: req.session.loggedIn
+  });
 });
 
 //single post
@@ -132,7 +134,7 @@ router.get('/post/:id', (req, res) => {
       const post = dbPostData.get({ plain: true });
 
       // pass data to template
-      res.render('single-post', { post });
+      res.render('single-post', { post, loggedIn:req.session.loggedIn });
     })
     .catch(err => {
       console.log(err);
@@ -140,5 +142,16 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
+//add new iten
+router.get('/newitem', (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('newitem',{
+    loggedIn: req.session.loggedIn
+  });
+});
 
 module.exports = router;
