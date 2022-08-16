@@ -12,14 +12,15 @@ async function newItemFormHandler(event) {
       body: JSON.stringify({
         title,
         post_description,
-        post_price
+        post_price,
+       
       }),
       headers: { 'Content-Type': 'application/json' }
     });
 
     // check the response status
     if (response.ok) {
-     document.location.reload();
+     document.location.replace('/');
     } else {
       alert(response.statusText);
     }

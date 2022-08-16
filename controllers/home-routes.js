@@ -37,7 +37,7 @@ router.get('/', (req, res) => {
     const posts = dbPostData.map(post => post.get({ plain: true })); 
     res.render('homepage', { 
       posts,
-      loggedIn: req.session.loggedIn });
+       });
     
     })
     .catch(err => {
@@ -50,7 +50,7 @@ router.get('/', (req, res) => {
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
-        document.location.reload();
+       
     return;
   }
 
@@ -109,5 +109,31 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
+//newitem page
+router.get('/newitem', (req, res) => {
+
+
+  res.render('newItem');
+});
+
+//post new item
+
+router.post('/newitem', (req, res) => {
+  // check the session
+  if (req.session) {
+    Post.create({
+      title: req.body.title,
+      post_description: req.body.post_description,
+      post_price: req.body.post_price,
+      // use the id from the session
+      user_id: req.session.user_id
+    })
+      .then(dbCommentData => res.json(dbCommentData))
+      .catch(err => {
+        console.log(err);
+        res.status(400).json(err);
+      });
+  }
+});
 
 module.exports = router;

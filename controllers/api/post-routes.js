@@ -72,18 +72,38 @@ router.get('/:id', (req, res) => {
 });
 
 //create a post
+// router.post('/', (req, res) => {
+//    Post.create({
+//     title: req.body.title,
+//     post_description: req.body.post_description,
+//     post_price: req.body.post_price,
+//     user_id: req.body.user_id
+//   })
+//     .then(dbPostData => res.json(dbPostData))
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
+
 router.post('/', (req, res) => {
-   Post.create({
-    title: req.body.title,
-    post_description: req.body.post_description,
-    post_price: req.body.post_price,
-    user_id: req.body.user_id
-  })
-    .then(dbPostData => res.json(dbPostData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  // check the session
+  if (req.session) {
+    Post.create({
+       title: req.body.title,
+       post_description: req.body.post_description,
+        post_price: req.body.post_price,
+   
+  
+      // use the id from the session
+      user_id: req.session.user_id
+    })
+      .then(dbCommentData => res.json(dbCommentData))
+      .catch(err => {
+        console.log(err);
+        res.status(400).json(err);
+      });
+  }
 });
 
 //update a post
@@ -132,6 +152,10 @@ router.delete('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
+
+
+
+
 
 
 module.exports = router;

@@ -1,31 +1,22 @@
-  <article class="post">
-      <div class="title">
-       <h3>{{post.title}}</h3>
-       <p>{{post.post_description}}</p>
-       <p>${{post.post_price}}</p>
-       <p>Category: {{post.category_name}}</p> 
-        
-
 <form class="new-item-form">
-  <div>
-    <h2>List a new item for sale!!</h2>
+      <h3>List an item to sell to people in your neighbourhood!</h3>
+        <div>
+          <label for="title">What do you have for sale?</label>
+          <input type="text" name="title" id="title">
+        </div>
+         <div>
+          <label for="post-description">Describe the item ... </label>
+        <textarea id="post-description" name="post-description" rows="4" cols="33"></textarea>
+        </div>
+        <div>
+          <label for="post-price">How much?</label>
+          <input type="number" name="post-price" id="post-price">
+        </div>
+        <div>
+           <button type="submit">Submit item for sale!</button>
+        </div>
+          
+    </form>
 
-    <label for="post_tite">title:</label>
-    <input type="text" id="post_title" />
-  </div>
-  <div>
-    <label for="post_description">description:</label>
-    <input type="text" id="post_description" />
-  </div>
-  <div>
-    <label for="post_price">Price:</label>
-    <input type="number" id="post_price" />
-  </div>
-
-  <div>
-    <label for="post_category">category:</label>
-    <input type="text" id="post_category" />
-  </div>
-  <div>
-    <button type="submit">+ add </button>
-  </div>
+    
+<script src="/javascript/newItem.js"></script>
