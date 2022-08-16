@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 body,
 html {
     height: 100%;
@@ -9,6 +10,8 @@ html {
     margin: 0;
     font-family: sans-serif;
     color: #333;
+    background-image: radial-gradient(circle, #033f8d 0%, #00d4ff 100%);
+
 }
 
 a {
@@ -85,13 +88,10 @@ header {
     padding: 0 1%;
 }
 
-header h1 {
+header h1 { 
+    
     font-size: 1em;
-}
-
-main {
-    flex: 1;
-    padding: 2% 4%;
+   
 }
 
 .btn-no-style {
