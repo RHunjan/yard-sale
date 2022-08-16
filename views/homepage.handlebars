@@ -1,20 +1,51 @@
-<ol class="post-list">
+<div class="row">
+  <div class="col-sm-9">
+    <ol class="post-list">
       {{#each posts as |post|}}
-  <li>
+    <li>
     <article class="post">
       <div class="title">
+        Posted on {{format_date post.created_at}}
        <h3>{{post.title}}</h3>
-       <p>{{post.post_description}}</p>
-       <p>${{post.post_price}}</p>
-       <p>Category: {{post.category_name}}</p> 
-        
+       <p><em>{{post.post_description}}</em></p>
+       <p><strong>Price:</strong> ${{post.post_price}}</p>
+       <p><strong>Category:</strong>{{post.category.category_name}}</p>    
       </div>
       <div class="meta">
-        By {{post.user.username}} on {{post.created_at}}
-        |
-        <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+        <strong>Contact</strong><a href="mailto:{{post.user.email}}">{{post.user.email}}</a>
       </div>
+  
     </article>
   </li>
     {{/each}}
 </ol>
+
+  </div>
+  <div class="col-sm-3">
+
+ 
+
+    <form class="new-item-form">
+      <h3>List an item to sell to people in your neighbourhood!</h3>
+        <div>
+          <label for="title">What do you have for sale?</label>
+          <input type="text" name="title" id="title">
+        </div>
+         <div>
+          <label for="post-description">Describe the item ... </label>
+        <textarea id="post-description" name="post-description" rows="4" cols="33"></textarea>
+        </div>
+        <div>
+          <label for="post-price">How much?</label>
+          <input type="number" name="post-price" id="post-price">
+        </div>
+        <div>
+           <button type="submit">Submit item for sale!</button>
+        </div>
+          
+    </form>
+  </div> 
+</div>
+ 
+
+<script src="/javascript/newItem.js"></script>
