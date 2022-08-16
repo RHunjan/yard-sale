@@ -6,8 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Just Tech News</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>
 </head>
-
+<style type="text/css">
+  #my-svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  #my-svg{
+    stroke-linecap: square;
+    fill-opacity: 0.5;
+  }
+  #my-svg.finished{
+    fill-opacity: 1;
+  }
+</style>
 <body>
   <div class="wrapper">
     <header>
@@ -30,6 +45,16 @@
   </div>
 
     <script src="/javascript/logout.js"></script>
+  
+  <script type="text/javascript">
+    new Vivus(
+      'my-svg',{
+        type: 'delayed',
+        duration: 200,
+        animTimingFunction: Vivus.EASE
+      }
+    );
+</script>
 
 </body>
 
