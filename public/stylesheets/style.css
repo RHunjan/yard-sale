@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 body,
 html {
     height: 100%;
@@ -9,6 +10,8 @@ html {
     margin: 0;
     font-family: sans-serif;
     color: #333;
+    background-image: radial-gradient(circle, #5799ef 0%, #00d4ff 100%);
+
 }
 
 a {
@@ -85,13 +88,10 @@ header {
     padding: 0 1%;
 }
 
-header h1 {
+header h1 { 
+    
     font-size: 1em;
-}
-
-main {
-    flex: 1;
-    padding: 2% 4%;
+   
 }
 
 .btn-no-style {
@@ -112,13 +112,24 @@ main {
     color: #3486eb;
 }
 
-.delete-post-btn {
-    background-color: #d41414;
-}
 
-.delete-post-btn:hover {
-    background-color: #ff643d;
-}
+.delet-post-btn{
+    color: rgb(255, 255, 255); font-size: 16px; 
+    line-height: 16px;
+     padding: 6px; 
+     border-radius: 
+     10px; font-family: Georgia, serif; font-weight: normal; 
+     text-decoration: none; 
+     font-style: normal; 
+     font-variant: normal; 
+     text-transform: none;
+      background-image: linear-gradient(to right, rgb(164, 28, 28) 0%, rgb(201, 115, 34) 50%, rgb(255, 98, 0) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(250, 35, 78); display: inline-block;}
+   
+    .delet-post-button:hover {
+    background: #1C6EA4; }
+  
+    .delete-post-btn:active {background: #144E75; }
+
 
 .post {
     margin-bottom: 2%;
