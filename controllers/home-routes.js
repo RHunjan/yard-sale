@@ -37,7 +37,9 @@ router.get('/', (req, res) => {
   //     console.log(err);
   //     res.status(500).json(err);
   //   });
-  res.render('landing');
+  res.render('landing',{
+    loggedIn: req.session.loggedIn
+  });
 });
 
 router.get('/homepage', (req, res) => {
@@ -68,7 +70,7 @@ Post.findAll({
   .then(dbPostData => {
     // pass a single post object into the homepage template
   const posts = dbPostData.map(post => post.get({ plain: true })); 
-  res.render('homepage', { posts });
+  res.render('homepage', { posts, loggedIn: req.session.loggedIn });
   })
   .catch(err => {
     console.log(err);

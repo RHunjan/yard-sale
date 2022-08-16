@@ -31,8 +31,11 @@
       </h1>
 
       <nav>
-          <button id="logout" class="btn-no-style">logout</button>
-        <a href="/login">login</a>
+        {{#if loggedIn}}
+          <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
+        <a href="/login">Login / Sign Up</a>
+        {{/if}}
      </nav>
 
     </header>
@@ -44,8 +47,10 @@
     </footer>
   </div>
 
+{{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
-  
+{{/if}}
+
   <script type="text/javascript">
     new Vivus(
       'my-svg',{
