@@ -45,6 +45,17 @@ button:hover {
     padding: 0;
 }
 
+  .post-list li {
+      list-style-type: none;
+  }
+
+  .post {
+      border: solid #355c7d;
+      padding-left: 20px;
+      border-radius: 25px;
+
+  }
+
 textarea,
 input {
     padding: .5%;

@@ -63,7 +63,7 @@ Post.findAll({
     },
     {
       model: User,
-      attributes: ['username']
+      attributes: ['username', 'email']
     }
   ]
 })
