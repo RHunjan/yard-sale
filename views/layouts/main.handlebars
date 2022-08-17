@@ -4,23 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech News</title>
+  <title>Yard-Sale</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>
 </head>
 <style type="text/css">
-  #my-svg{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  }
   #my-svg{
     stroke-linecap: square;
     fill-opacity: 0.5;
   }
   #my-svg.finished{
     fill-opacity: 1;
+  }
+  footer{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    background-color: blue;
+    color: aliceblue;
+  }
+  header{
+    height: 60px;
   }
 </style>
 <body>
@@ -43,7 +49,7 @@
      </nav>
 
     </header>
-    <main>
+    <main style="padding-bottom: 50px;">
       {{{ body }}}
     </main>
     <footer>
