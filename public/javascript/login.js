@@ -19,7 +19,7 @@ async function signupFormHandler(event) {
 
     // check the response status
     if (response.ok) {
-      console.log('success');
+      alert(`You're signed up! Please Login!`);
     } else {
       alert(response.statusText);
     }
