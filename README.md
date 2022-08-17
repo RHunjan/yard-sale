@@ -21,11 +21,12 @@ A platform for neighbourhood residents to buy and sell everyday items. This will
   <img src="./public/assets/2.png">
 
   ## Installation:
-  App uses NODE.JS, EXPRESS.JS, MYSQL, Sequelize ORM, Vivus, Bcrypt, DotEnv, Express-Session, Express-Handlebars etc. or just do 'npm i' through the command line to install the necessary packages. App also deployed to Heroku.
+  App uses NODE.JS, EXPRESS.JS, MYSQL, Sequelize ORM, Vivus, Bcrypt, DotEnv, Express-Session, Express-Handlebars etc. or just do 'npm i' through the command line to install the necessary packages. 
+  App also deployed to Heroku: https://yard-5ale.herokuapp.com/
 
   ## Usage:
   'npm start' or 'node server'
-  deployed app: 
+  deployed app: https://yard-5ale.herokuapp.com/
 
   ## License:
   None
@@ -34,7 +35,7 @@ A platform for neighbourhood residents to buy and sell everyday items. This will
   Contributions done by:
     - Github: [neetsabharwal](https://github.com/neetsabharwal)
     - Github: [RHunjan](https://github.com/RHunjan)
-    - Githun: [AlexxSavov](https://github.com/AlexxSavov)
+    - Github: [AlexxSavov](https://github.com/AlexxSavov)
 
   ## Testing:
   Tested thoroughly in develompment environment.
