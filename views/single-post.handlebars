@@ -1,0 +1,38 @@
+  <article class="post">
+      <div class="title">
+       <h3>{{post.title}}</h3>
+       <p>{{post.post_description}}</p>
+       <p>${{post.post_price}}</p>
+       <p>Category: {{post.category_name}}</p> 
+        
+      </div>
+      <div class="meta">
+        By {{post.user.username}} on {{post.created_at}}
+        |
+        <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+      </div>
+
+      <form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+    <button type="button" class="upvote-btn">upvote</button>
+  </div>
+</form>
+
+<div class="comments">
+  {{#each post.comments}}
+  <section class="comment">
+    <div class="meta">
+      {{user.username}} on {{created_at}}
+    </div>
+    <div class="text">
+      {{comment_text}}
+    </div>
+  </section>
+  {{/each}}
+</div>
+    </article>

@@ -1,0 +1,43 @@
+
+
+<div class="row">
+  <div class="col-sm-8">
+    <ol class="post-list">
+      {{#each posts as |post|}}
+    <li>
+    <article class="post">
+      <div class="title">
+        Posted on {{format_date post.created_at}}
+       <h3>{{post.title}}</h3>
+       <p><em>{{post.post_description}}</em></p>
+       <p><strong>Price:</strong> ${{post.post_price}}</p>
+     
+      </div>
+      <div class="meta">
+        <strong>Contact</strong>  <a href="mailto:{{post.user.email}}">{{post.user.email}}</a>
+      </div>
+  
+    </article>
+  </li>
+    {{/each}}
+</ol>
+
+  </div>
+  <div class="col-sm-4 left" >
+
+ <button id="newitembtn">Add a new item for sale!</button>
+
+    <p>Buy and sell gently used items with people in your neighbourhood.</p>
+
+    <div>
+   <img src="https://images.unsplash.com/photo-1618990908950-fd1a23294d11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bmVpZ2hib3Job29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" >
+    </div>
+  </div> 
+</div>
+
+<script type="text/javascript">
+    document.getElementById("newitembtn").onclick = function () {
+        location.href = "/newitem";
+    };
+</script>
+

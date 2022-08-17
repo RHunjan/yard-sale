@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body,
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+    background-image: radial-gradient(circle, #5799ef 0%, #00d4ff 100%);
+
+}
+
+
+
+header {
+font-size: 60px;
+}
+
+a {
+    text-decoration: none;
+    color: #225ca3;
+    font-weight: bold;
+    transition: color .1s;
+}
+
+a:hover {
+    color: #3486eb;
+}
+
+button {
+    background-color: #225ca3;
+    border: 0;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    transition: background-color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #3486eb;
+}
+
+.post-list {
+    margin: 5px;
+    padding: 5px;
+}
+
+  .post-list li {
+      list-style-type: none;
+  }
+
+  .post {
+      border: solid #355c7d;
+      padding-left: 20px;
+      border-radius: 25px;
+
+  }
+
+textarea,
+input {
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+    border: 1px solid #3486eb;
+}
+
+textarea {
+    min-width: 40%;
+    min-height: 100px;
+}
+
+form>div {
+    margin-bottom: 2%;
+}
+
+form label {
+    display: block;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+}
+
+header h1 { 
+    
+    font-size: 1em;
+    
+}
+
+header h1 a {
+    color: #F4D03F;
+}
+
+.btn-no-style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #225ca3;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color .1s;
+    margin-left: 16px;
+}
+
+.btn-no-style:hover {
+    background: none;
+    color: #3486eb;
+}
+
+.log {
+    font-size: 30px;
+}
+
+.delet-post-btn{
+    color: rgb(255, 255, 255); font-size: 16px; 
+    line-height: 16px;
+     padding: 6px; 
+     border-radius: 
+     10px; font-family: Georgia, serif; font-weight: normal; 
+     text-decoration: none; 
+     font-style: normal; 
+     font-variant: normal; 
+     text-transform: none;
+      background-image: linear-gradient(to right, rgb(164, 28, 28) 0%, rgb(201, 115, 34) 50%, rgb(255, 98, 0) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(250, 35, 78); display: inline-block;}
+   
+    .delet-post-button:hover {
+    background: #1C6EA4; }
+  
+    .delete-post-btn:active {background: #144E75; }
+
+
+.post {
+    margin-bottom: 2%;
+    line-height: 150%;
+}
+
+.post .title span {
+    font-style: italic;
+    font-size: 90%;
+    color: #7d7d7d;
+}
+
+.edit-link {
+    display: block;
+    margin: -1.5% 0 2% 0;
+}
+
+.upvote-btn {
+    background-color: #197d0f;
+    transition: background-color .1s;
+}
+
+.upvote-btn:hover {
+    background-color: #1f9c13;
+}
+
+.comment-form {
+    margin-bottom: 5%;
+}
+
+.comment {
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+.comment:nth-child(odd) {
+    background-color: #fff5eb;
+}
+
+.comment .meta {
+    font-size: 90%;
+    margin-bottom: .5%;
+    opacity: .6;
+}
+
+.new-post-form input {
+    width: 300px;
+}
+
+.edit-post-form {
+    margin-bottom: 5%;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+}
+/*-------------------*/
+#newitembtn {
+padding: 10px;
+margin: 20px;
+color: #F4D03F;
+}
+
+.left {
+    text-align: center;
+    font-weight: bold;
+    color: #F4D03F;
+    font-size: 20px;
+  
+}
+
+article h3 {
+    color: #F4D03F;
+}
+
+.yellow {
+    color: #F4D03F;
+}

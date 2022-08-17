@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just Tech News</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>
+</head>
+<style type="text/css">
+  #my-svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  #my-svg{
+    stroke-linecap: square;
+    fill-opacity: 0.5;
+  }
+  #my-svg.finished{
+    fill-opacity: 1;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>
+        {{#if loggedIn}}
+        <a  href="/homepage">Yard Sale</a>
+        {{else}}
+        <a href="/">Yard Sale</a>
+        {{/if}}
+      </h1>
+
+      <nav>
+        {{#if loggedIn}}
+          <button id="logout" class="btn-no-style log">Logout</button>
+          {{else}}
+        <a class="log" href="/login">Login / Sign Up</a>
+        {{/if}}
+     </nav>
+
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      Buy and sell items with people in your neighbourhood!
+    </footer>
+  </div>
+
+{{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+{{/if}}
+
+  <script type="text/javascript">
+    new Vivus(
+      'my-svg',{
+        type: 'delayed',
+        duration: 200,
+        animTimingFunction: Vivus.EASE
+      }
+    );
+</script>
+
+</body>
+
+</html>
