@@ -14,6 +14,12 @@ html {
 
 }
 
+
+
+header {
+font-size: 60px;
+}
+
 a {
     text-decoration: none;
     color: #225ca3;
@@ -41,8 +47,8 @@ button:hover {
 }
 
 .post-list {
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding: 5px;
 }
 
   .post-list li {
@@ -102,7 +108,11 @@ header {
 header h1 { 
     
     font-size: 1em;
-   
+    
+}
+
+header h1 a {
+    color: #F4D03F;
 }
 
 .btn-no-style {
@@ -123,6 +133,9 @@ header h1 {
     color: #3486eb;
 }
 
+.log {
+    font-size: 30px;
+}
 
 .delet-post-btn{
     color: rgb(255, 255, 255); font-size: 16px; 
@@ -200,4 +213,26 @@ footer {
     justify-content: center;
     padding: 1%;
     font-size: 110%;
+}
+/*-------------------*/
+#newitembtn {
+padding: 10px;
+margin: 20px;
+color: #F4D03F;
+}
+
+.left {
+    text-align: center;
+    font-weight: bold;
+    color: #F4D03F;
+    font-size: 20px;
+  
+}
+
+article h3 {
+    color: #F4D03F;
+}
+
+.yellow {
+    color: #F4D03F;
 }

@@ -29,7 +29,7 @@
     <header>
       <h1>
         {{#if loggedIn}}
-        <a href="/homepage">Yard Sale</a>
+        <a  href="/homepage">Yard Sale</a>
         {{else}}
         <a href="/">Yard Sale</a>
         {{/if}}
@@ -37,9 +37,9 @@
 
       <nav>
         {{#if loggedIn}}
-          <button id="logout" class="btn-no-style">Logout</button>
+          <button id="logout" class="btn-no-style log">Logout</button>
           {{else}}
-        <a href="/login">Login / Sign Up</a>
+        <a class="log" href="/login">Login / Sign Up</a>
         {{/if}}
      </nav>
 
