@@ -37,7 +37,7 @@ router.get('/', withAuth, (req, res) => {
 });
 
 //find one post
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {
       id: req.params.id
@@ -91,7 +91,7 @@ router.post('/', withAuth, (req, res) => {
 });
 
 //update a post
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {
       title: req.body.title,
@@ -118,7 +118,7 @@ router.put('/:id', (req, res) => {
 });
 
 //Delete a post
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Post.destroy({
     where: {
       id: req.params.id
