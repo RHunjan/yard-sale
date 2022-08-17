@@ -33,9 +33,9 @@ A platform for neighbourhood residents to buy and sell everyday items. This will
 
   ## Contribution:
   Contributions done by:
-    - Github: [neetsabharwal](https://github.com/neetsabharwal)
-    - Github: [RHunjan](https://github.com/RHunjan)
-    - Github: [AlexxSavov](https://github.com/AlexxSavov)
+    - [neetsabharwal](https://github.com/neetsabharwal)
+    - [RHunjan](https://github.com/RHunjan)
+    - [AlexxSavov](https://github.com/AlexxSavov)
 
   ## Testing:
   Tested thoroughly in develompment environment.
