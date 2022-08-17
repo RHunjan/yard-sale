@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const { Post, User, Comment, Category } = require('../../models');
-const withAuth = require('../../utils/auth');
+//const withAuth = require('../../utils/auth');
 
 // get all users
-router.get('/', withAuth, (req, res) => {
+router.get('/', (req, res) => {
 
   //find all posts  
   Post.findAll({
@@ -73,7 +73,7 @@ router.get('/:id', (req, res) => {
 });
 
 //create a post
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
   Post.create({
        title: req.body.title,
        post_description: req.body.post_description,
